@@ -3,7 +3,7 @@
 <%= form_with(model: @task, local: true) do |f| %>
   <%=render 'layouts/form_errors'%>
   
-  <%=f.select :status,'ステータス'%>
+  <%=f.select :status,{1=>'a',2=>'b'}%>
   <%=f.text_field :status%>
   
   <%= f.label :content, 'タスク' %>
