@@ -6,17 +6,15 @@
   <% @tasks.each do |task| %>
     <li><%= link_to task.user.id, task%><%= link_to task.id, task%> : <%=task.status%><br><%=task.content %></li>
   <% end %>
-<%= link_to '新規タスクの作成', new_task_path %> 
+  <%= link_to '新規タスクの作成', new_task_path %> 
 </ul>
+  <%= link_to 'logout',logout_path, method: :delete %>
 <% else %>
   <div class="center jumbotron">
     <div class="text-center">
       <h1>Welcome to the Tasklist</h1>
     </div>
   </div>
+  <%= link_to 'login',login_path %>
 <% end %>
 
-
-
-<%= link_to 'login',login_path %>
-<%= link_to 'logout',logout_path, method: :delete %>
